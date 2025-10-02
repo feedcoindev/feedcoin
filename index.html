@@ -1,148 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$FEED – Feed the World</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: url('https://images.unsplash.com/photo-1532635241-17e820acc59d?auto=format&fit=crop&w=1600&q=80') 
-        no-repeat center center/cover;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      backdrop-filter: brightness(0.6);
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: rgba(0,0,0,0.5);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #f9d342;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #ddd;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .progress-container {
-      width: 90%;
-      max-width: 600px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
-
-    .progress-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #f1f1f1;
-    }
-
-    .progress-bar {
-      width: 100%;
-      height: 30px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #f9d342, #f39c12);
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(249,211,66,0.8);
-      transition: width 2s ease-in-out;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0,0,0,0.6);
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="$FEED — Every Trade Feeds Someone" />
+    <meta name="author" content="FeedCoin Team" />
+    <title>$FEED – Every Trade Feeds Someone</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
-  <header>
-    <h1>$FEED – Feed the World</h1>
-    <p>Together we aim to raise $1,000,000 to fight hunger</p>
-  </header>
+<body id="page-top">
 
-  <main>
-    <div class="progress-container">
-      <div class="progress-header">
-        <span>Raised: $<span id="raisedAmount">0</span></span>
-        <span>Goal: $1,000,000</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-    </div>
-  </main>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">$FEED</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#donation">Donation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <footer>
-    &copy; 2025 $FEED | Together we feed the world
-  </footer>
+    <!-- Hero Section -->
+    <header class="masthead" style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url('assets/img/hero-bg.jpg') center/cover no-repeat;">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <img src="assets/img/feed-logo.png" alt="$FEED Logo" style="max-width:180px; margin-bottom:20px;">
+                    <h1 class="text-white font-weight-bold">$FEED</h1>
+                    <h3 class="text-white-75 mb-3">Every Trade Feeds Someone</h3>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 mb-4">
+                        $FEED is the Solana memecoin where Pump.fun fees help feed children in crisis zones —
+                        Yemen, Gaza, Sudan, Ukraine & more. 100% of fees go to 
+                        <a href="https://hodlhope.org/home" class="text-warning" target="_blank">Save&nbsp;the&nbsp;Children</a>.
+                    </p>
+                    <a class="btn btn-primary btn-xl" href="#donation">View Donation Wallet</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <script>
-    // Initial values
-    const raised = 0; // amount raised
-    const goal = 1000000; // goal amount
-    const progressFill = document.getElementById('progressFill');
-    const raisedAmount = document.getElementById('raisedAmount');
+    <!-- About Section -->
+    <section class="page-section" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">About $FEED</h2>
+                <h3 class="section-subheading text-muted">Turning memes into meals for kids worldwide.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Powered by Pump.fun</h4>
+                    <p class="text-muted">Every buy & sell generates platform fees. We donate all of ours to feed hungry children.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-hand-holding-heart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Transparent Donations</h4>
+                    <p class="text-muted">All donations are on-chain and verifiable. Follow our journey to hit $1M for Save the Children.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Join the Movement</h4>
+                    <p class="text-muted">Memes can change the world. Hold $FEED and help us climb the HODL Hope leaderboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Calculate percentage
-    const percentage = (raised / goal) * 100;
-    progressFill.style.width = percentage + '%';
-    raisedAmount.textContent = raised.toLocaleString();
+    <!-- Donation Section -->
+    <section class="page-section bg-light" id="donation">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="text-uppercase text-primary mb-4">Donation Wallet</h2>
+            <p class="lead mb-3">
+                100% of Pump.fun fees are donated to <strong>Save the Children</strong> through
+                <a href="https://hodlhope.org/home" target="_blank">HODL&nbsp;Hope</a> campaign.
+            </p>
+            <p class="lead mb-2"><strong>Goal:</strong> $1,000,000</p>
+            <p class="lead mb-2"><strong>Raised so far:</strong> <span class="text-success">$0</span> (live counter coming soon)</p>
+            <p class="lead mb-4"><strong>Solana Wallet:</strong> <code>PASTE_YOUR_SOLANA_WALLET_ADDRESS_HERE</code></p>
+            <a class="btn btn-primary btn-xl" href="https://pump.fun/" target="_blank">Buy $FEED Now</a>
+        </div>
+    </section>
 
-    // Animate from 0 to raised (optional future use)
-    let current = 0;
-    const increment = Math.ceil(goal / 200); // step for smoother animation
-    const interval = setInterval(() => {
-      if (current >= raised) {
-        clearInterval(interval);
-      } else {
-        current += increment;
-        if (current > raised) current = raised;
-        raisedAmount.textContent = current.toLocaleString();
-        progressFill.style.width = (current / goal) * 100 + '%';
-      }
-    }, 20);
-  </script>
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Join our community or reach out for collaborations.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fab fa-twitter fa-3x text-primary mb-3"></i>
+                    <h4 class="my-3">Twitter / X</h4>
+                    <p><a href="https://twitter.com/feedcoin" target="_blank">@feedcoin</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-telegram fa-3x text-primary mb-3"></i>
+                    <h4 class="my-3">Telegram</h4>
+                    <p><a href="https://t.me/feedcoin" target="_blank">t.me/feedcoin</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-instagram fa-3x text-primary mb-3"></i>
+                    <h4 class="my-3">Instagram</h4>
+                    <p><a href="https://instagram.com/feedcoin" target="_blank">@feedcoin</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>© 2025 $FEED – Every Trade Feeds Someone</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
