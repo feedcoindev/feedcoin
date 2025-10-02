@@ -3,162 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FeedCoin – Feed the World</title>
+  <title>$FEED – Feed the World</title>
   <style>
-    /* Reset & Base */
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {
-      background: url('assets/img/feedbg.jpg') no-repeat center center/cover;
-      color: #fff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1532635241-17e820acc59d?auto=format&fit=crop&w=1600&q=80') 
+        no-repeat center center/cover;
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      backdrop-filter: brightness(0.6);
     }
+
     header {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0,0,0,0.5);
     }
-    header img {
-      height: 50px;
-    }
+
     header h1 {
-      font-size: 1.8rem;
+      font-size: 3rem;
       font-weight: bold;
-      color: #f1f1f1;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      color: #f9d342;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #ddd;
     }
 
     main {
       flex: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 40px 20px;
-      backdrop-filter: brightness(0.7);
-      text-align: center;
-    }
-    main h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      align-items: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
     }
 
-    /* Progress Bar Section */
     .progress-container {
       width: 90%;
       max-width: 600px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
-      margin-top: 20px;
-    }
-    .progress-bar {
-      height: 25px;
-      width: 0%;
-      background: linear-gradient(90deg, #00ff85, #00c2ff);
-      border-radius: 25px 0 0 25px;
-      transition: width 1s ease-in-out;
-    }
-    .progress-labels {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 8px;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
-    /* Partners Section */
-    .partners {
-      margin-top: 40px;
-    }
-    .partners h3 {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    }
-    .partner-logos {
+    .progress-header {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #f1f1f1;
     }
-    .partner-logos img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.6);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
       background: rgba(255,255,255,0.2);
-      transition: transform 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
     }
-    .partner-logos img:hover {
-      transform: scale(1.05);
-      border-color: #00ff85;
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #f9d342, #f39c12);
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(249,211,66,0.8);
+      transition: width 2s ease-in-out;
     }
 
     footer {
-      background: rgba(0, 0, 0, 0.5);
       text-align: center;
-      padding: 12px;
+      padding: 1rem;
+      background: rgba(0,0,0,0.6);
       font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <img src="assets/img/logo.png" alt="FeedCoin Logo">
-    <h1>FeedCoin</h1>
+    <h1>$FEED – Feed the World</h1>
+    <p>Together we aim to raise $1,000,000 to fight hunger</p>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <h2>Help Feed the World</h2>
-
-    <!-- Progress Bar -->
     <div class="progress-container">
-      <div class="progress-bar" id="progress-bar"></div>
-    </div>
-    <div class="progress-labels">
-      <span id="raised">$0 Raised</span>
-      <span>$1,000,000 Goal</span>
-    </div>
-
-    <!-- Partners -->
-    <div class="partners">
-      <h3>Powered By</h3>
-      <div class="partner-logos">
-        <img src="assets/img/pumpfun.jpg" alt="PumpFun Logo">
+      <div class="progress-header">
+        <span>Raised: $<span id="raisedAmount">0</span></span>
+        <span>Goal: $1,000,000</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 FeedCoin. All Rights Reserved.
+    &copy; 2025 $FEED | Together we feed the world
   </footer>
 
   <script>
-    // Progress Bar JS
-    const raised = 0;          // dynamically replace later
-    const goal = 1000000;
-    const progressBar = document.getElementById('progress-bar');
-    const raisedLabel = document.getElementById('raised');
+    // Initial values
+    const raised = 0; // amount raised
+    const goal = 1000000; // goal amount
+    const progressFill = document.getElementById('progressFill');
+    const raisedAmount = document.getElementById('raisedAmount');
 
-    const progress = Math.min((raised / goal) * 100, 100);
-    progressBar.style.width = progress + '%';
-    raisedLabel.textContent = `$${raised.toLocaleString()} Raised`;
+    // Calculate percentage
+    const percentage = (raised / goal) * 100;
+    progressFill.style.width = percentage + '%';
+    raisedAmount.textContent = raised.toLocaleString();
+
+    // Animate from 0 to raised (optional future use)
+    let current = 0;
+    const increment = Math.ceil(goal / 200); // step for smoother animation
+    const interval = setInterval(() => {
+      if (current >= raised) {
+        clearInterval(interval);
+      } else {
+        current += increment;
+        if (current > raised) current = raised;
+        raisedAmount.textContent = current.toLocaleString();
+        progressFill.style.width = (current / goal) * 100 + '%';
+      }
+    }, 20);
   </script>
 </body>
 </html>
